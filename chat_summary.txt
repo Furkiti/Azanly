@@ -1,0 +1,131 @@
+# Chat Summary for Namazio Project
+
+## Project Overview
+- **Project Name**: Namazio (Azanly globally)
+- **Framework**: React Native
+- **Language**: TypeScript
+- **State Management**: Context API
+- **Navigation**: @react-navigation/native
+- **Notifications**: notifee
+- **API Source**: Aladhan API
+
+## Recent Changes
+1. **Location Services Implementation**:
+   - Added react-native-geolocation-service for accurate location detection
+   - Implemented location permissions handling for both iOS and Android
+   - Added OpenStreetMap's Nominatim service for reverse geocoding
+   - Enhanced error handling and logging for location services
+   - Added location display (city and district) to prayer times card
+
+2. **Prayer Times API Integration**:
+   - Integrated Aladhan API for fetching prayer times
+   - Added error handling and loading states
+   - Implemented retry mechanism for failed API calls
+   - Added detailed logging for debugging purposes
+
+3. **Android-specific Updates**:
+   - Added required location permissions in AndroidManifest.xml
+   - Implemented background location access
+   - Added force location request and dialog options
+   - Enhanced permission request flow with multiple permission types
+
+4. **iOS-specific Updates**:
+   - Added location permission descriptions in Info.plist
+   - Implemented location authorization request
+
+5. **UI Enhancements**:
+   - Added loading indicators
+   - Improved error messages
+   - Added location display in prayer times card
+   - Enhanced retry button functionality
+
+2. **Screens Created**:
+   - HomeScreen (Main screen with prayer times, daily verse and hadith)
+   - PrayerTimesScreen
+   - AyatHadithScreen
+   - AboutScreen
+   - DhikrScreen (Accessible from HomeScreen)
+   - QiblaScreen (Accessible from HomeScreen)
+
+3. **Navigation Setup**:
+   - Stack navigation for main screens
+   - Tab navigation for bottom menu
+
+4. **Dependencies Added**:
+   - @react-navigation/native
+   - @react-navigation/stack
+   - react-native-geolocation-service
+   - react-native-safe-area-context
+   - react-native-screens
+   - react-native-vector-icons
+   - react-native-gesture-handler
+
+## Home Screen Features
+1. **Location-aware prayer times**:
+   - Shows prayer times based on the user's location
+   - Displays city and district information
+
+2. **City and district display**:
+   - Shows the city and district of the user's location
+
+3. **Daily verse**:
+   - Displays the daily verse from the Quran
+
+4. **Daily hadith**:
+   - Displays the daily hadith from the Prophet's teachings
+
+5. **Navigation buttons**:
+   - Zikirmatik button (left)
+   - Kıble Yönü button (right)
+
+## Design References
+- **Modern UI with cards**:
+  - Consistent color scheme
+  - Responsive layout
+  - Loading and error states
+
+## Notes
+- Ensure all dependencies are installed before running the app
+- Check for any linter errors and resolve them as needed
+- Background image needs to be added to assets folder
+- API integration for prayer times pending
+- Dhikr and Qibla screen functionalities to be implemented
+
+This summary should help in understanding the current state of the project and assist in future development sessions. 
+
+## Notes for Future Work
+1. **Consider caching prayer times**:
+   - Improves performance and reduces API calls
+2. **Add offline support**:
+   - Ensures functionality even when internet is unavailable
+3. **Implement notifications for prayer times**:
+   - Alerts users to upcoming prayers
+4. **Add language switching capability**:
+   - Supports multiple languages
+5. **Consider adding weather information**:
+   - Provides additional context and user experience
+
+## Testing Instructions
+1. **Location Testing**:
+   - For emulator: Use 'adb emu geo fix [longitude] [latitude]'
+   - Example for Ankara: 'adb emu geo fix 32.8597 39.9334'
+   - Check location permissions in device settings
+   - Verify location services are enabled
+
+2. **Prayer Times Testing**:
+   - Verify API responses
+   - Check time format display
+   - Test error scenarios
+   - Verify retry functionality
+
+## Debug Information
+- **Location logs available in Metro console**:
+  - Helps in debugging location-related issues
+- **API response logs for troubleshooting**:
+  - Useful for diagnosing API-related problems
+- **Permission status logs**:
+  - Helps in managing and debugging permission-related issues
+- **Detailed error logging implemented**:
+  - Helps in diagnosing and resolving issues
+
+This summary should help in understanding the current state of the project and assist in future development sessions. 
